@@ -1,0 +1,23 @@
+package array;
+
+import java.util.Scanner;
+
+public class vetor {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int indice = 0;
+		int i =0;
+		
+	
+		int[] array = new int [20];
+		
+		for (i = 0; i<array.length; i++) {
+			System.out.println("Insirao termo " + (i+1) + " do vetor");
+			array [i]= scanner.nextInt();
+			if ( array [i] % 2 == 0) {
+				indice++;
+
+			}
+		} System.out.println("Nesse vetor " + indice + " numeros são pares");
+	}
+}
