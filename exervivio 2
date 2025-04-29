@@ -1,0 +1,23 @@
+package array;
+
+import java.util.Scanner;
+
+public class vetor {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int indice = 0;
+		int i =0;
+		int maior = - 999999999;
+	
+		int[] array = new int [15];
+		
+		for (i = 0; i<array.length; i++) {
+			System.out.println("Insirao termo " + (i+1) + " do vetor");
+			array [i]= scanner.nextInt();
+			if ( array[i] > maior) {
+				maior = array[i];
+				indice = i;
+			}
+		} System.out.println("O maior termo do vetor é: " + maior + " e seu indice é: " + (indice +1)  );
+	}
+}
