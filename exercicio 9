@@ -1,0 +1,59 @@
+package array;
+
+import java.util.Scanner;
+
+public class vetor {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int[] array = new int[6];
+        int[] antonio = new int[6];
+        int[] comuns = new int[6];
+        int contador = 0;
+
+      
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Insira o termo " + (i + 1) + " do primeiro vetor: ");
+            array[i] = scanner.nextInt();
+        }
+
+      
+        for (int i = 0; i < antonio.length; i++) {
+            System.out.println("Insira o termo " + (i + 1) + " do segundo vetor: ");
+            antonio[i] = scanner.nextInt();
+        }
+
+     
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < antonio.length; j++) {
+                if (array[i] == antonio[j]) {
+                    
+                    int jaExiste = 0;
+                    for (int k = 0; k < contador; k++) {
+                        if (comuns[k] == array[i]) {
+                            jaExiste = 1;
+                            break;
+                        }
+                       }
+                    if (jaExiste == 0) {
+                        comuns[contador] = array[i];
+                        contador++;
+                    }
+                    }
+            			}
+   }
+
+      
+        System.out.println("Elementos em comum:");
+        if (contador == 0) {
+            System.out.println("Nenhum elemento em comum.");
+        } else 
+        {
+            for (int i = 0; i < contador; i++) {
+                System.out.print(comuns[i] + " ");
+            }
+         }
+
+       
+      }
+  }
